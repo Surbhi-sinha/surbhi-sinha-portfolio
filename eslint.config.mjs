@@ -11,6 +11,12 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      "react/no-unescaped-entities": "off", // Turn off quote escaping error
+      "@next/next/no-img-element": "off",   // (optional) Turn off <img /> warning
+    },
+  },
 ];
 
 export default eslintConfig;

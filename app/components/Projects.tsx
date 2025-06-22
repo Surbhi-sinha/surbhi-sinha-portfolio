@@ -1,7 +1,7 @@
 import React from 'react';
 import { GithubIconsvg } from '@/public/GithubIconsvg';
 import { LiveLinkIcon } from '@/public/LiveLinkIcon';
-let projects = [
+const projects = [
     // {
     //     imageURL: "", // add image if available
     //     title: "Kam Lead Management System",
