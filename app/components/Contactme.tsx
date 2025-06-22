@@ -3,7 +3,7 @@ import { EmailIconsvg } from '@/public/EmailIconsvg';
 import { RedirectIconsvg } from '@/public/RedirectIconsvg';
 import { GithubIconLargesvg } from '@/public/GithubIconLargesvg';
 import { LinkedinIconsvg } from '@/public/LinkedinIconsvg';
-import { TwitterIconsvg } from '@/public/TwitterIconsvg';
+// import { TwitterIconsvg } from '@/public/TwitterIconsvg';
 import {MediumIconsvg} from "@/public/mediumIconsvg"
 
 const connectData = [
