@@ -11,7 +11,7 @@ const projects = [
     //     liveURL: ""
     // },
     {
-        imageURL: "/carstudio.gif",
+        imageURL: "/carStudio.gif",
         title: "The CarStudio",
         description: "3D car customization platform using .glb files and a rich interactive UI.",
         stack: ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Bootstrap"],
