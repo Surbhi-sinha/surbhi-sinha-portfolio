@@ -87,7 +87,7 @@ export const Contactme = () => {
                                 <span className="command">echo "Looking forward to connecting with you!"</span>
                             </div>
                             <div className="response">
-                                <p>Looking forward to connecting with you!</p>
+                                <p>&#63;&#63;&#63;Looking forward to connecting with you!</p>
                             </div>
                         </div>
                     </div>

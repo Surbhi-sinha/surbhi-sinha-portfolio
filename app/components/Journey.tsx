@@ -30,8 +30,8 @@ const timelineData = [
         role: "FullStack Developer",
         company: "UXMagic.ai",
         icon: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z",
-        description: "Mentored junior developers and architected cloud-native solutions. Led migration of legacy systems to modern tech stack.",
-        skills: ["Node.js", "MongoDB"," TypeScript", "ReactJS", "NodeJS", "Visual Studio", "postgreSQL", "mySQL" , "Azure"]
+        description: "Architected and delivered mission-critical platform features, leveraging advanced AI models to automate wireframe creation and component generation, significantly accelerating the UI/UX design workflow.",
+        skills: ["Node.js", "MongoDB"," TypeScript", "ReactJS", "NodeJS", "Visual Studio", "postgreSQL", "mySQL" , "Azure","NextJS"]
     },
 ];
 
