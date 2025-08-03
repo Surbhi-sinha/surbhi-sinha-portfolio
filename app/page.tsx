@@ -6,9 +6,13 @@ import { Contactme } from "./components/Contactme";
 import { Projects } from "./components/Projects";
 import { Journey } from "./components/Journey";
 import { Footer } from "./components/footer";
+import  Background from "./components/Background";
+import AvatarCanvas from "./components/AvatarCanvas";
 export default function Main() {
   return (
     <div className="">
+      {/* <Background/> */}
+      <AvatarCanvas/>
       <Home/>
       <Navbar/>
       <HeroSection/>
