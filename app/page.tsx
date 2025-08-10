@@ -8,6 +8,7 @@ import { Journey } from "./components/Journey";
 import { Footer } from "./components/footer";
 import  Background from "./components/Background";
 import AvatarCanvas from "./components/AvatarCanvas";
+import { MagicalSparkles } from "./components/MagicalSparkle";
 export default function Main() {
   return (
     <div className="">
@@ -21,6 +22,9 @@ export default function Main() {
       <Journey/>
       <Contactme/>
       <Footer/>
+      
+      {/* Global Magical Sparkle Cursor Effect */}
+      <MagicalSparkles />
     </div>
   );
 }

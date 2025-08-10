@@ -1,12 +1,15 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF, useAnimations } from "@react-three/drei";
 import { Suspense, useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 
-// ScrollTracker component to measure scroll progress
-function ScrollTracker({ onScroll }: { onScroll: (progress: number) => void }) {
+// ScrollTracker component to measure scroll progress and detect current section
+function ScrollTracker({ onScroll, onSectionChange }: { 
+  onScroll: (progress: number) => void;
+  onSectionChange: (section: string) => void;
+}) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -17,11 +20,18 @@ function ScrollTracker({ onScroll }: { onScroll: (progress: number) => void }) {
     
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [onScroll]);
+  }, [onScroll, onSectionChange]);
   
   return null;
 }
-function AnimatedModel({ scrollProgress, onShowChat }: { scrollProgress: number; onShowChat: (show: boolean) => void }) {
+
+function AnimatedModel({ 
+  scrollProgress, 
+  currentSection 
+}: { 
+  scrollProgress: number; 
+  currentSection: string;
+}) {
   const group = useRef<THREE.Object3D>(null);
   const headBone = useRef<THREE.Object3D>(null);
   const leftEye = useRef<THREE.Object3D>(null);
@@ -142,7 +152,7 @@ function AnimatedModel({ scrollProgress, onShowChat }: { scrollProgress: number;
     
   }, [scene]);
   
-  // Play animation and detect hello motion
+  // Play animation
   useEffect(() => {
     // Log all available animations
     console.log("Available animations:", Object.keys(actions));
@@ -153,9 +163,6 @@ function AnimatedModel({ scrollProgress, onShowChat }: { scrollProgress: number;
     if (idle) {
       console.log("Playing animation:", idle.getClip().name);
       idle.play();
-      
-      // Since this appears to be a hello/wave animation, show the chat message
-      onShowChat(true);
     } else {
       console.log("No animation found to play");
     }
@@ -287,123 +294,79 @@ function AnimatedModel({ scrollProgress, onShowChat }: { scrollProgress: number;
 
   // Apply scroll-based rotation and slight left movement to the entire model
   useFrame(() => {
-    if (group.current) {
-      // Rotate clockwise around Y-axis based on scroll progress
-      // Full rotation is 2π radians (6.28), so we multiply scrollProgress by 2π
-      const targetRotation = scrollProgress * Math.PI * 2; // Clockwise rotation
-      
-      // Move slightly to the left based on scroll progress
-      // Start at position 0 and move to -2 (slight left movement)
-      const targetX = scrollProgress * -1;
-      
-      // Apply smooth interpolation for the rotation
-      group.current.rotation.y += (targetRotation - group.current.rotation.y) * 1;
-      
-      // Apply smooth interpolation for the left movement
-      group.current.position.x += (targetX - group.current.position.x) * 0.7;
-    }
+    if (!group.current) return;
+    
+    // Rotate clockwise around Y-axis based on scroll progress
+    // Full rotation is 2π radians (6.28), so we multiply scrollProgress by 2π
+    const targetRotation = scrollProgress * Math.PI * 2; // Clockwise rotation
+    
+    // Move slightly to the left based on scroll progress
+    // Start at position 0 and move to -2 (slight left movement)
+    const targetX = scrollProgress * -1;
+    
+    // Apply smooth interpolation for the rotation
+    group.current.rotation.y += (targetRotation - group.current.rotation.y) * 1;
+    
+    // Apply smooth interpolation for the left movement
+    group.current.position.x += (targetX - group.current.position.x) * 0.7;
   });
 
   return (
-    <primitive ref={group} object={scene} scale={4} position={[-3, -5, 1]} />
+    <primitive ref={group} object={scene} scale={3.5} position={[-3, -4, 0]} />
   );
 }
 
 export default function AnimatedAvatar() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [showChatMessage, setShowChatMessage] = useState(false);
-  const [chatStep, setChatStep] = useState(1); // 1: initial, 2: after button click
+  const [currentSection, setCurrentSection] = useState('home');
   
   return (
-    <div style={{ height: "300vh" }}> {/* Make page scrollable */}
-      <div style={{ 
-        position: "fixed", 
-        top: 0, 
-        left: 0, 
-        width: "100%", 
-        height: "100vh",
-        zIndex: 10
+    <div style={{ 
+      position: "fixed", 
+      top: 0, 
+      left: 0, 
+      width: "100%", 
+      height: "100vh",
+      zIndex: -1, // Put in background
+      pointerEvents: "none" // Make it non-interactive so buttons on top work
+    }}>
+      <Canvas style={{ 
+        height: "100%", 
+        width: "100%" 
       }}>
-        <Canvas style={{ 
-          height: "100%", 
-          width: "100%" 
-        }}>
-          <ambientLight intensity={1.2} />
-          <directionalLight position={[3, 2, 1]} intensity={2} />
-          <Suspense fallback={null}>
-            <AnimatedModel scrollProgress={scrollProgress} onShowChat={setShowChatMessage} />
-          </Suspense>
-          <OrbitControls enableZoom={false} />
-        </Canvas>
-      </div>
-      
-      {/* Chat Message Popup */}
-      {showChatMessage && (
-        <div style={{
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          transform: "translateX(-50%) translateY(-50%)",
-          background: "rgba(255, 255, 255, 0.4)", // Semi-transparent white
-          backdropFilter: "blur(10px)",          // Applies blur
-          WebkitBackdropFilter: "blur(10px)",    // Safari support
-          color: "white",
-          padding: "20px",
-          borderRadius: "20px",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-          fontSize: "14px",
-          fontWeight: "500",
-          zIndex: 1000,
-          border: "2px solid #e0e0e0",
-          minWidth: "200px",
-          textAlign: "center"
-        }}>
+        <ambientLight intensity={1.2} />
+        <directionalLight position={[3, 2, 1]} intensity={2} />
         
-          <div style={{ marginBottom: "15px" }}>
-            {chatStep === 1 ? "👋 Hi! I’m Surbhi 😄✨" : "Let’s dive in — scroll down 👇"}
-          </div>
-          
-          <button
-            onClick={() => {
-              if (chatStep === 1) {
-                setChatStep(2);
-              } else {
-                setShowChatMessage(false);
-                setChatStep(1); // Reset for next time
-              }
-            }}
-            style={{
-              background: "#007bff",
-              color: "white",
-              border: "none",
-              padding: "8px 16px",
-              borderRadius: "8px",
-              cursor: "pointer",
-              fontSize: "14px",
-              fontWeight: "500",
-              transition: "background 0.2s"
-            }}
-            onMouseOver={(e) => e.currentTarget.style.background = "#0056b3"}
-            onMouseOut={(e) => e.currentTarget.style.background = "#007bff"}
-          >
-            {chatStep === 1 ? "Hello!" : "OK"}
-          </button>
-          
-          <div style={{
-            position: "absolute",
-            bottom: "-8px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "0",
-            height: "0",
-            borderLeft: "8px solid transparent",
-            borderRight: "8px solid transparent",
-            borderTop: "8px solid white"
-          }}></div>
-        </div>
-      )}
+        <Suspense fallback={null}>
+          <AnimatedModel 
+            scrollProgress={scrollProgress} 
+            currentSection={currentSection}
+          />
+        </Suspense>
+        
+      </Canvas>
       
-      <ScrollTracker onScroll={setScrollProgress} />
+      <ScrollTracker 
+        onScroll={setScrollProgress} 
+        onSectionChange={setCurrentSection}
+      />
+      
+      {/* Debug indicator - remove this in production */}
+      <div style={{
+        position: "fixed",
+        top: "20px",
+        right: "20px",
+        background: "rgba(0, 0, 0, 0.8)",
+        color: "white",
+        padding: "8px 12px",
+        borderRadius: "8px",
+        fontSize: "12px",
+        fontFamily: "monospace",
+        zIndex: 1000,
+        pointerEvents: "none"
+      }}>
+        Section: {currentSection}
+      </div>
       
     </div>
   );

@@ -6,6 +6,56 @@
   box-sizing: border-box;
 }
 
+/* Hide default cursor for magical sparkle effect */
+* {
+  cursor: none !important;
+}
+
+/* Magical Sparkle Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 12px #FFD700) drop-shadow(0 0 20px #FF69B4);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    filter: drop-shadow(0 0 20px #FFD700) drop-shadow(0 0 30px #FF69B4) drop-shadow(0 0 40px #00FFFF);
+  }
+}
+
+@keyframes sparkleFloat {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-40px) scale(0.8) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkleGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px currentColor) drop-shadow(0 0 24px currentColor);
+  }
+}
+
+/* Enhanced sparkle effects */
+.sparkle-trail {
+  animation: sparkleFloat 2s ease-out forwards;
+}
+
+.sparkle-glow {
+  animation: sparkleGlow 1.5s ease-in-out infinite;
+}
+
 :root {
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
@@ -47,7 +97,7 @@ html {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   opacity: 0.5;
 }
 
@@ -326,6 +376,7 @@ nav {
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  margin-top:15%;
 }
 
 
