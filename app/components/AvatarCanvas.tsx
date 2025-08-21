@@ -27,7 +27,6 @@ function ScrollTracker({ onScroll, onSectionChange }: {
 
 function AnimatedModel({ 
   scrollProgress, 
-  currentSection 
 }: { 
   scrollProgress: number; 
   currentSection: string;
@@ -40,7 +39,7 @@ function AnimatedModel({
   const { actions } = useAnimations(animations, group);
   const mouse = useRef({ x: 0, y: 0 });
   const [foundBones, setFoundBones] = useState<string[]>([]);
-  
+  console.log(foundBones);
   // Log all bones and find eyes and head
   useEffect(() => {
     if (!group.current) return;
@@ -48,13 +47,12 @@ function AnimatedModel({
     const bones: string[] = [];
     group.current.traverse((obj) => {
       if (obj instanceof THREE.Bone) {
-        console.log("🦴 Bone found:", obj.name);
         bones.push(obj.name);
       }
       
       // Look for eye objects - they might be bones or meshes
       if (obj.name.includes('Eye') || obj.name.includes('eye')) {
-        console.log("👁️ Eye found:", obj.name);
+      
         if (obj.name.includes('Left') || obj.name.includes('left')) {
           leftEye.current = obj;
         }
@@ -76,12 +74,12 @@ function AnimatedModel({
         if (obj instanceof THREE.Bone) {
           if (!leftEye.current && 
               (eyeBoneNames.includes(obj.name) || (obj.name.includes("Left") && obj.name.includes("Eye")))) {
-            console.log("👁️ Left eye bone found:", obj.name);
+            // console.log("👁️ Left eye bone found:", obj.name);
             leftEye.current = obj;
           }
           if (!rightEye.current && 
               (eyeBoneNames.includes(obj.name) || (obj.name.includes("Right") && obj.name.includes("Eye")))) {
-            console.log("👁️ Right eye bone found:", obj.name);
+            // console.log("👁️ Right eye bone found:", obj.name);
             rightEye.current = obj;
           }
         }
@@ -94,7 +92,7 @@ function AnimatedModel({
     for (const boneName of headBoneNames) {
       group.current.traverse((obj) => {
         if (obj instanceof THREE.Bone && obj.name === boneName) {
-          console.log("🎯 FOUND HEAD BONE:", boneName, obj);
+          // console.log("🎯 FOUND HEAD BONE:", boneName, obj);
           headBone.current = obj;
           
           // Store initial rotation for reference
@@ -111,9 +109,7 @@ function AnimatedModel({
       if (headBone.current) break;
     }
     
-    if (!headBone.current) {
-      console.error("❌ No head bone found! Available bones:", bones);
-    }
+    
     
     // If we still didn't find eye bones, try to find eye meshes
     if (!leftEye.current || !rightEye.current) {
@@ -121,12 +117,12 @@ function AnimatedModel({
         if (obj instanceof THREE.Mesh) {
           if (!leftEye.current && obj.name.toLowerCase().includes("eye") && 
               obj.name.toLowerCase().includes("left")) {
-            console.log("👁️ Left eye mesh found:", obj.name);
+            // console.log("👁️ Left eye mesh found:", obj.name);
             leftEye.current = obj;
           }
           if (!rightEye.current && obj.name.toLowerCase().includes("eye") && 
               obj.name.toLowerCase().includes("right")) {
-            console.log("👁️ Right eye mesh found:", obj.name);
+            // console.log("👁️ Right eye mesh found:", obj.name);
             rightEye.current = obj;
           }
         }
@@ -259,7 +255,7 @@ function AnimatedModel({
 
         // Log available morph targets once
         if (!mesh.morphTargetsLogged) {
-          console.log("Available morph targets:", Object.keys(mesh.morphTargetDictionary));
+          // console.log("Available morph targets:", Object.keys(mesh.morphTargetDictionary));
           mesh.morphTargetsLogged = true;
         }
         

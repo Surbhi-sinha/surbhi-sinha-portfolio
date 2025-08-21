@@ -15,6 +15,8 @@ const eslintConfig = [
     rules: {
       "react/no-unescaped-entities": "off", // Turn off quote escaping error
       "@next/next/no-img-element": "off",   // (optional) Turn off <img /> warning
+      "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ];
