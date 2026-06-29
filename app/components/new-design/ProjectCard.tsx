@@ -19,7 +19,7 @@ function Media({
       src={src}
       alt={alt}
       loading="lazy"
-      className={`h-full w-full ${fitClass} grayscale transition-[filter,transform] duration-500 group-hover:grayscale-0 group-hover:scale-[1.03] ${className}`}
+      className={`project-media h-full w-full ${fitClass} grayscale transition-[filter,transform] duration-500 group-hover:grayscale-0 group-hover:scale-[1.03] ${className}`}
     />
   );
 }

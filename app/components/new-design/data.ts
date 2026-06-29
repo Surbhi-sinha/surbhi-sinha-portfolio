@@ -210,7 +210,7 @@ export const PROJECTS: Project[] = [
     description:
       "A full-stack Notes Application built using React (Frontend) and Node.js with MongoDB (Backend). The app features an interactive canvas for managing notes, supports CRUD operations, and integrates AI enhancements using OpenRouter.",
     cta: { label: "LAUNCH APP", href: "https://neura-notes-ashen.vercel.app/" },
-    image: "/neuraNotes-Demo.gif",
+    image: "/NeuraNotesDemo.gif",
     points:[
       "Interactive Canvas: Drag and position notes freely.",
       "Create, Read, Update, Delete (CRUD) Notes.",

@@ -149,6 +149,14 @@ html {
   transition-duration: 1.6s;
 }
 
+/* On touch devices there's no hover, so colour project images once the card
+   scrolls into view (and let them fade back to grey when it leaves). */
+@media (hover: none) {
+  .reveal.is-visible .project-media {
+    filter: grayscale(0);
+  }
+}
+
 /* Accent text shimmer — a light band sweeps across accent-coloured text,
    à la Claude's shimmering text. Clip a moving gradient to the glyphs. */
 .text-shimmer {
