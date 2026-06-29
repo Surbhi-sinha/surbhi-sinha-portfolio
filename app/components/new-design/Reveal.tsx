@@ -12,8 +12,10 @@ type RevealProps = {
 
 /**
  * Wraps content in a scroll-triggered fade-up reveal.
- * Uses a single IntersectionObserver per element; respects reduced-motion
- * via the `.reveal` CSS class (see globals.css).
+ * Uses a single IntersectionObserver per element that re-triggers every time
+ * the element enters/leaves the viewport (fade in on scroll-in, fade out on
+ * scroll-out). Respects reduced-motion via the `.reveal` CSS class (see
+ * globals.css).
  */
 export function Reveal({
   children,
@@ -34,10 +36,9 @@ export function Reveal({
     }
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        // Toggle on every crossing so sections fade out when scrolled away
+        // and fade back in when scrolled into view again.
+        setVisible(entry.isIntersecting);
       },
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );

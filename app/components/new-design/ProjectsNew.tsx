@@ -20,7 +20,7 @@ export function ProjectsNew() {
             <span className="block text-white">Section</span>
           </h2>
           <a
-            href="https://github.com/Surbhisinha20"
+            href="https://github.com/Surbhi-sinha"
             target="_blank"
             rel="noreferrer"
             className="inline-flex w-fit items-center border border-white px-7 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-black"

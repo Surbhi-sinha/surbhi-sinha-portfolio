@@ -1,3 +1,4 @@
+import { CursorGlow } from "./components/new-design/CursorGlow";
 import { NavbarNew } from "./components/new-design/NavbarNew";
 import { HeroNew } from "./components/new-design/HeroNew";
 import { HeadlineNew } from "./components/new-design/HeadlineNew";
@@ -14,6 +15,7 @@ import { FooterNew } from "./components/new-design/FooterNew";
 export default function Main() {
   return (
     <div className="bg-black">
+      <CursorGlow />
       <NavbarNew />
       <main>
         <HeroNew />

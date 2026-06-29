@@ -159,7 +159,7 @@ export const CAPABILITIES = [
   },
   {
     index: "02_INTELLIGENCE_LAYER",
-    title: "APPLIED AI_AGENTS",
+    title: "APPLIED AI AGENTS",
     description:
       "Integrating large language models into production workflows. Developing autonomous agents for complex task orchestration and data analysis.",
     tags: ["PYTORCH", "OPENAI_API", "VECTOR_DB"],
@@ -210,7 +210,7 @@ export const PROJECTS: Project[] = [
     description:
       "A full-stack Notes Application built using React (Frontend) and Node.js with MongoDB (Backend). The app features an interactive canvas for managing notes, supports CRUD operations, and integrates AI enhancements using OpenRouter.",
     cta: { label: "LAUNCH APP", href: "https://neura-notes-ashen.vercel.app/" },
-    image: "/neuralNotes.png",
+    image: "/neuraNotes-Demo.gif",
     points:[
       "Interactive Canvas: Drag and position notes freely.",
       "Create, Read, Update, Delete (CRUD) Notes.",
@@ -266,7 +266,7 @@ export const PROJECTS: Project[] = [
     points:[],
     layout: "media-bg",
     theme: "dark",
-    ctaStyle: "bar",
+    ctaStyle: "accent",
   },
   {
     index: "06",
@@ -287,7 +287,7 @@ export const PROJECTS: Project[] = [
     title: "DESKTOP CALCULATOR",
     description:
       "Advanced Windows utility with support for keyboard shortcuts and dynamic theming, built using modern .NET architectures.",
-    cta: { label: "SOURCE CODE", href: "https://github.com/Surbhisinha20" },
+    cta: { label: "SOURCE CODE", href: "https://github.com/Surbhi-sinha" },
     image: "/calc.gif",
     points:[],
     layout: "media-bg",
@@ -354,7 +354,10 @@ export const JOURNEY = [
     role: "B.TECH IN COMPUTER SCIENCE",
     company: "Guru Govind Singh Indraprastha University",
     detail: "Computer Science Engineering",
-    point:[],
+    point:[
+      "CGPA : 9.2",
+      "Data Structures, Computer Networks &  Database Management System"
+    ],
     current: false,
   },
 ];

@@ -12,8 +12,8 @@
     Menlo, Monaco, Consolas, "Courier New", monospace;
 
   /* ── Colours ───────────────────────────────────────────────────────── */
-  /* Signature orange-red accent */
-  --color-accent: #FF3E00;
+  /* Signature yellow accent */
+  --color-accent: #d97757;
   --color-accent-bright: #ff5a2c;
 
   /* Neutral surface ramp (true-black background) */
@@ -97,6 +97,27 @@ body {
   overflow-x: hidden;
 }
 
+/* Accent-coloured scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 9999px;
+  border: 2px solid var(--color-ink);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-bright);
+}
+
 ::selection {
   background: var(--color-accent);
   color: #000;
@@ -113,6 +134,10 @@ body {
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+/* Slower variant for the hero entrance */
+.reveal.reveal-slow {
+  transition-duration: 1.6s;
 }
 
 /* ── Animated beam border ────────────────────────────────────────────────

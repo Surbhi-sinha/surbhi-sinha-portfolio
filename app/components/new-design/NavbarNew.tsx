@@ -41,14 +41,6 @@ export function NavbarNew() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/Surbhi-Sinha.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-white border border-line-strong px-4 py-2 transition-colors hover:border-accent hover:text-accent"
-          >
-            RESUME
-          </a>
         </div>
 
         {/* mobile toggle */}
@@ -91,15 +83,6 @@ export function NavbarNew() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="/Surbhi-Sinha.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="font-mono text-sm uppercase tracking-[0.2em] text-accent"
-            >
-              RESUME
-            </a>
           </div>
         </div>
       )}

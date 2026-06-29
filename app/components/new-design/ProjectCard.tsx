@@ -6,17 +6,20 @@ function Media({
   src,
   alt,
   className = "",
+  fit = "cover",
 }: {
   src: string;
   alt: string;
   className?: string;
+  fit?: "cover" | "contain";
 }) {
+  const fitClass = fit === "contain" ? "object-contain" : "object-cover";
   return (
     <img
       src={src}
       alt={alt}
       loading="lazy"
-      className={`h-full w-full object-cover grayscale transition-[filter,transform] duration-500 group-hover:grayscale-0 group-hover:scale-[1.03] ${className}`}
+      className={`h-full w-full ${fitClass} grayscale transition-[filter,transform] duration-500 group-hover:grayscale-0 group-hover:scale-[1.03] ${className}`}
     />
   );
 }
@@ -156,8 +159,8 @@ export function ProjectCard({ project }: { project: Project }) {
             <Cta project={project} />
           </div>
         </div>
-        <div className="relative min-h-[14rem] w-full overflow-hidden sm:w-[52%]">
-          <Media src={project.image} alt={project.title} />
+        <div className="relative min-h-[14rem] w-full overflow-hidden p-6 sm:w-[52%] sm:p-8">
+          <Media src={project.image} alt={project.title} fit="contain" />
         </div>
       </article>
     );
@@ -189,8 +192,8 @@ export function ProjectCard({ project }: { project: Project }) {
   // ── media-top (default) ──
   return (
     <article className={`group flex h-full flex-col overflow-hidden ${surface}`}>
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-900">
-        <Media src={project.image} alt={project.title} />
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-900 p-6 sm:p-8">
+        <Media src={project.image} alt={project.title} fit="contain" />
       </div>
       {Body}
     </article>
