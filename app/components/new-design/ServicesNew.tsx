@@ -18,7 +18,7 @@ export function ServicesNew() {
       <Reveal>
         <h2 className="font-display font-black uppercase leading-[0.86] tracking-[-0.02em] text-[clamp(2.75rem,11vw,9.5rem)]">
           <span className="block text-white hover:text-zinc-400 transition-all">Strategic</span>
-          <span className="block text-accent">Solutions</span>
+          <span className="block text-accent text-shimmer">Solutions</span>
         </h2>
       </Reveal>
 
@@ -35,7 +35,7 @@ export function ServicesNew() {
                 className="border-t border-line py-12 last:border-b"
               >
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent">
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent text-shimmer">
                     {service.index} / {service.tag}
                   </span>
                   <Icon className="h-4 w-4 text-accent" />

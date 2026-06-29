@@ -46,11 +46,11 @@ export function ContactNew() {
             <h2 className="font-display font-black uppercase leading-[0.86] tracking-[-0.02em] text-[clamp(3rem,8vw,6rem)]">
               <span className="block text-white">Let&rsquo;s</span>
               <span className="block text-white">Talk</span>
-              <span className="block italic text-accent">Biz</span>
+              <span className="block italic text-accent text-shimmer pr-[0.12em]">Biz</span>
             </h2>
 
             <div className="mt-12">
-              <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
+              <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
                 Direct_Relay
               </p>
               <a
@@ -103,7 +103,7 @@ export function ContactNew() {
             onSubmit={handleSubmit}
             className="flex flex-col border-t border-line p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12"
           >
-            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
               Inquiry_Form_V2
             </p>
             <h3 className="mt-3 font-sans text-2xl font-extrabold uppercase tracking-[0.04em] text-white sm:text-3xl">
@@ -115,7 +115,7 @@ export function ContactNew() {
                 <div key={field.name}>
                   <label
                     htmlFor={field.name}
-                    className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent"
+                    className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent text-shimmer"
                   >
                     {field.label}
                   </label>
@@ -137,7 +137,7 @@ export function ContactNew() {
               <div>
                 <label
                   htmlFor="brief"
-                  className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent"
+                  className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent text-shimmer"
                 >
                   Project_Parameters
                 </label>

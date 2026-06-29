@@ -18,11 +18,11 @@ export function HeadlineNew() {
       <Reveal delay={80}>
         <h2 className="mt-10 font-display font-black uppercase leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,11.5vw,10.5rem)]">
           <span className="block text-white hover:text-zinc-400 transition-all">Engineering</span>
-          <span className="block text-accent">Growth</span>
+          <span className="block text-accent text-shimmer">Growth</span>
           <span className="block text-white hover:text-zinc-400 transition-all">Through</span>
-          <span className="block text-accent">Scalable</span>
-          <span className="block text-accent">
-            Solutions<span className="text-accent">.</span>
+          <span className="block text-accent text-shimmer">Scalable</span>
+          <span className="block text-accent text-shimmer">
+            Solutions<span className="text-accent text-shimmer">.</span>
           </span>
         </h2>
       </Reveal>

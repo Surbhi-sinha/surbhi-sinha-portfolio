@@ -53,10 +53,10 @@ export function HeroNew() {
         as="h1"
         className="reveal-slow font-display font-black  uppercase leading-[0.86] tracking-[-0.03em] text-[clamp(2.75rem,12.5vw,12rem)]"
       >
-        <span className=" text-accent italic inline">SURBHI</span>{" "}
+        <span className=" text-accent text-shimmer italic inline pr-[0.12em] -mr-[0.12em]">SURBHI</span>{" "}
         <span className=" text-white inline">
           SINHA
-          <span className="text-accent">.</span>
+          <span className="text-accent text-shimmer">.</span>
         </span>
       </Reveal>
 
@@ -67,7 +67,7 @@ export function HeroNew() {
           delay={150}
           className="reveal-slow flex flex-col border border-line p-7 sm:p-9"
         >
-          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-accent">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-accent text-shimmer">
             CORE_COMPETENCY
           </p>
           <p className="mt-6 max-w-sm font-mono text-[13px] uppercase leading-[1.9] tracking-[0.04em] text-zinc-300">
@@ -102,7 +102,7 @@ export function HeroNew() {
               >
                 <Icon className="h-5 w-5 text-accent" />
                 <div className="mt-10">
-                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.15em] text-accent">
+                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.15em] text-accent text-shimmer">
                     {stat.label}
                   </p>
                   <div className="mt-3 space-y-1">

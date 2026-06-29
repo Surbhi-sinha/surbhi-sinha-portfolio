@@ -46,14 +46,14 @@ export function ImpactNew() {
       <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.5fr)] lg:gap-14">
         {/* ── LEFT ── */}
         <Reveal>
-          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
+          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
             Proven Impact
           </p>
 
           <h2 className="mt-5 font-display font-black uppercase leading-[0.92] tracking-[-0.02em] text-[clamp(2.5rem,6vw,4.75rem)]">
             <span className="block text-white">Building</span>
             <span className="block text-white">Solutions</span>
-            <span className="block text-accent">That Scale.</span>
+            <span className="block text-accent text-shimmer">That Scale.</span>
           </h2>
 
           <p className="mt-7 max-w-md font-sans text-lg leading-relaxed text-zinc-400">
@@ -76,7 +76,7 @@ export function ImpactNew() {
                 <p className="mt-6 font-sans text-3xl font-extrabold tracking-tight text-white">
                   {stat.value}
                 </p>
-                <p className="mt-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.08em] text-accent">
+                <p className="mt-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.08em] text-accent text-shimmer">
                   {stat.label}
                 </p>
                 <p className="mt-2.5 font-sans text-[13px] leading-snug text-zinc-500">

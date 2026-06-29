@@ -11,12 +11,12 @@ export function ProjectsNew() {
     >
       {/* Heading */}
       <Reveal>
-        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
+        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
           Selected Works
         </p>
         <div className="mt-5 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="font-display font-black uppercase leading-[0.82] tracking-[-0.02em] text-[clamp(2.75rem,10vw,8.5rem)]">
-            <span className="block text-accent">Projects</span>
+            <span className="block text-accent text-shimmer">Projects</span>
             <span className="block text-white">Section</span>
           </h2>
           <a

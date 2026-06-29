@@ -11,7 +11,7 @@ export function CapabilitiesNew() {
           <h2 className="font-display font-black uppercase leading-[0.82] tracking-[-0.02em] text-[clamp(2.75rem,9vw,7.5rem)] text-white">
             Capabilities<span className="text-white">.</span>
           </h2>
-          <span className="mb-2 hidden font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent sm:block">
+          <span className="mb-2 hidden font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent text-shimmer sm:block">
             MODULES_01-03
           </span>
         </div>
@@ -29,7 +29,7 @@ export function CapabilitiesNew() {
               i > 0 ? "border-t border-line lg:border-t-0 lg:border-l" : ""
             }`}
           >
-            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-accent">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-accent text-shimmer">
               {cap.index}
             </p>
 

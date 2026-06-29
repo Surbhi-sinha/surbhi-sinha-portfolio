@@ -21,7 +21,7 @@ export function ShowcaseNew() {
           <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-[auto_1fr_auto] lg:gap-10">
             <h2 className="font-display font-black uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(2.5rem,8vw,6.5rem)]">
               <span className="block text-white">Complexity</span>
-              <span className="block text-accent">Simplified<span className="text-accent">.</span></span>
+              <span className="block text-accent text-shimmer">Simplified<span className="text-accent text-shimmer">.</span></span>
             </h2>
 
             <div className="beam-border max-w-xs bg-black/30 p-5 backdrop-blur-sm lg:mt-2">

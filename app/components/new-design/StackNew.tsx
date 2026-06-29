@@ -17,7 +17,7 @@ export function StackNew() {
         <div>
           <Reveal>
             <h2 className="font-display font-black uppercase leading-[0.82] tracking-[-0.02em] text-[clamp(3rem,9vw,7rem)]">
-              <span className="block text-accent">Stack</span>
+              <span className="block text-accent text-shimmer">Stack</span>
               <span className="block text-white">Specs<span className="text-white">.</span></span>
             </h2>
           </Reveal>
@@ -61,7 +61,7 @@ export function StackNew() {
                   i >= 1 && i < 2 ? "border-t border-line-strong sm:border-t-0" : ""
                 }`}
               >
-                <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent">
+                <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent text-shimmer">
                   {group.title}
                 </h3>
                 <ul className="mt-6 space-y-3">
@@ -70,7 +70,7 @@ export function StackNew() {
                       key={item}
                       className="flex items-baseline justify-between gap-4"
                     >
-                      <span className="font-mono text-xs text-accent">
+                      <span className="font-mono text-xs text-accent text-shimmer">
                         {String(j + 1).padStart(2, "0")}
                       </span>
                       <span className="text-right font-mono text-[12px] text-zinc-200 sm:text-[13px]">

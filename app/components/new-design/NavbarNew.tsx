@@ -27,7 +27,7 @@ export function NavbarNew() {
           href="#home"
           className="font-sans text-sm font-extrabold uppercase tracking-[0.18em] text-white transition-colors hover:text-accent"
         >
-          SURBHI&nbsp;SINHA<span className="text-accent">.</span>
+          SURBHI&nbsp;SINHA<span className="text-accent text-shimmer">.</span>
         </a>
 
         {/* desktop links */}

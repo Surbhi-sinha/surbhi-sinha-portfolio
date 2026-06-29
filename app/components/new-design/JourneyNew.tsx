@@ -10,12 +10,12 @@ export function JourneyNew() {
     >
       {/* Heading */}
       <Reveal>
-        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
+        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
           career.timeline()
         </p>
         <h2 className="mt-5 font-display font-black uppercase leading-[0.84] tracking-[-0.02em] text-[clamp(2.75rem,11vw,9.5rem)]">
           <span className="block text-white">Professional</span>
-          <span className="block text-accent">Journey</span>
+          <span className="block text-accent text-shimmer">Journey</span>
         </h2>
       </Reveal>
 
@@ -30,7 +30,7 @@ export function JourneyNew() {
             {/* period / location */}
             <div className="font-mono text-[11px] uppercase leading-relaxed tracking-[0.08em]">
               <p className="text-zinc-500">{item.period}</p>
-              <p className="mt-1 text-accent">{item.location}</p>
+              <p className="mt-1 text-accent text-shimmer">{item.location}</p>
             </div>
 
             {/* role / company / detail */}
@@ -45,7 +45,7 @@ export function JourneyNew() {
                   </span>
                 )}
               </div>
-              <p className="mt-5 font-sans text-lg text-accent">{item.company}</p>
+              <p className="mt-5 font-sans text-lg text-accent text-shimmer">{item.company}</p>
               <p className="mt-1 font-sans text-sm text-zinc-500">{item.detail}</p>
               <ul className="mt-4">
                 {item.point.map((point) => {
