@@ -20,13 +20,13 @@ export function ShowcaseNew() {
         <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-16 lg:absolute lg:inset-0 lg:flex lg:items-center lg:px-14 lg:py-0">
           <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-[auto_1fr_auto] lg:gap-10">
             <h2 className="font-display font-black uppercase leading-[0.88] tracking-[-0.02em] text-[clamp(2.5rem,8vw,6.5rem)]">
-              <span className="block text-white">Complexity</span>
-              <span className="block text-accent text-shimmer">Simplified<span className="text-accent text-shimmer">.</span></span>
+              <span className="block text-white">Ideas Into</span>
+              <span className="block text-accent text-shimmer">Products<span className="text-accent text-shimmer">.</span></span>
             </h2>
 
             <div className="beam-border max-w-xs bg-black/30 p-5 backdrop-blur-sm lg:mt-2">
               <p className="font-sans text-lg font-bold leading-tight text-white sm:text-xl">
-                I build the infrastructure that helps startups become giants.
+                From reusable interfaces to AI orchestration and real-time backends, I ship the full product journey.
               </p>
             </div>
 

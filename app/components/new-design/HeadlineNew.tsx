@@ -9,7 +9,7 @@ export function HeadlineNew() {
         <div className="flex items-center gap-3">
           <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-accent animate-[status-pulse_2s_ease-in-out_infinite]" />
           <span className="font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-white">
-            Available for selective partnerships
+            Full-stack developer / AI product engineer
           </span>
         </div>
       </Reveal>
@@ -17,12 +17,12 @@ export function HeadlineNew() {
       {/* Display headline */}
       <Reveal delay={80}>
         <h2 className="mt-10 font-display font-black uppercase leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,11.5vw,10.5rem)]">
-          <span className="block text-white hover:text-zinc-400 transition-all">Engineering</span>
-          <span className="block text-accent text-shimmer">Growth</span>
-          <span className="block text-white hover:text-zinc-400 transition-all">Through</span>
-          <span className="block text-accent text-shimmer">Scalable</span>
+          <span className="block text-white hover:text-zinc-400 transition-all">Building</span>
+          <span className="block text-accent text-shimmer">Intelligent</span>
+          <span className="block text-white hover:text-zinc-400 transition-all">Products</span>
+          <span className="block text-accent text-shimmer">End To End</span>
           <span className="block text-accent text-shimmer">
-            Solutions<span className="text-accent text-shimmer">.</span>
+            At Scale<span className="text-accent text-shimmer">.</span>
           </span>
         </h2>
       </Reveal>
@@ -31,10 +31,10 @@ export function HeadlineNew() {
       <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <Reveal className="max-w-md">
           <p className="font-sans text-base leading-relaxed text-zinc-400">
-            I help startups and enterprises turn complex ideas into
-            high-performance, production-ready digital products. Specializing in
-            full-stack development, AI integration, and cloud architecture that
-            scales.
+            I build user-facing products from interface to infrastructure. My
+            work spans multi-agent AI workflows at UXMagic.AI, enterprise
+            JavaScript tooling at GrapeCity, and Azure DevOps engineering at
+            Microsoft.
           </p>
         </Reveal>
 
@@ -43,13 +43,13 @@ export function HeadlineNew() {
             href="#contact"
             className="inline-flex items-center justify-center border border-white px-7 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-black"
           >
-            Let&rsquo;s Connect
+            Contact Me
           </a>
           <a
-            href="#services"
+            href="#journey"
             className="inline-flex items-center justify-center border border-line-strong px-7 py-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-300 transition-colors hover:border-accent hover:text-accent"
           >
-            Explore Services
+            View Experience
           </a>
         </Reveal>
       </div>

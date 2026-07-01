@@ -11,21 +11,21 @@ import { CodeWindow } from "./CodeWindow";
 const STATS = [
   {
     icon: FlashIcon,
-    value: "99.98%",
-    label: "UPTIME",
-    desc: "Reliable systems that never sleep.",
+    value: "35%",
+    label: "FEATURE ADOPTION",
+    desc: "Increase linked to guided LLM workflows.",
   },
   {
     icon: ChartColumnIcon,
-    value: "10M+",
-    label: "USERS IMPACTED",
-    desc: "Solutions used by millions worldwide.",
+    value: "20-30%",
+    label: "FASTER LOADS",
+    desc: "Improvement across newly launched pages.",
   },
   {
     icon: SourceCodeIcon,
-    value: "50+",
-    label: "FEATURES DELIVERED",
-    desc: "End-to-end products shipped to scale.",
+    value: "25%",
+    label: "FEWER EXPORT ERRORS",
+    desc: "Reliability gain in a core React workflow.",
   },
 ];
 
@@ -47,18 +47,19 @@ export function ImpactNew() {
         {/* ── LEFT ── */}
         <Reveal>
           <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
-            Proven Impact
+            Resume Highlights
           </p>
 
           <h2 className="mt-5 font-display font-black uppercase leading-[0.92] tracking-[-0.02em] text-[clamp(2.5rem,6vw,4.75rem)]">
-            <span className="block text-white">Building</span>
-            <span className="block text-white">Solutions</span>
-            <span className="block text-accent text-shimmer">That Scale.</span>
+            <span className="block text-white">Measured</span>
+            <span className="block text-white">Product</span>
+            <span className="block text-accent text-shimmer">Impact.</span>
           </h2>
 
           <p className="mt-7 max-w-md font-sans text-lg leading-relaxed text-zinc-400">
-            High-performance applications engineered for reliability,
-            scalability, and real business outcomes.
+            Performance, adoption, and reliability improvements delivered in
+            production at UXMagic.AI, backed by enterprise engineering
+            experience at GrapeCity and Microsoft.
           </p>
 
           {/* Stat cards */}
@@ -95,7 +96,7 @@ export function ImpactNew() {
             <span className="h-4 w-px bg-line-strong" />
             <span className="font-sans text-sm font-semibold">GrapeCity</span>
             <span className="h-4 w-px bg-line-strong" />
-            <span className="font-sans text-sm font-semibold">UXMAGIC.AI</span>
+            <span className="font-sans text-sm font-semibold">UXMagic.AI</span>
           </div>
         </Reveal>
 

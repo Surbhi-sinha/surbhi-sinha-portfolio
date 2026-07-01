@@ -1,7 +1,7 @@
 import React from "react";
 import { SOCIALS } from "./data";
 
-const FOOTER_LINKS = ["LINKEDIN", "MEDIUM", "WEBSITE", "GITHUB"];
+const FOOTER_LINKS = ["LINKEDIN", "MEDIUM", "RESUME", "GITHUB"];
 
 export function FooterNew() {
   const hrefFor = (label: string) =>
@@ -16,7 +16,7 @@ export function FooterNew() {
           </span>
           <span className="hidden h-4 w-px bg-line-strong sm:block" />
           <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500">
-            High on tea, deep in the codebase. All rights reserved
+            Full-stack developer building intelligent, useful products.
           </span>
         </div>
 
