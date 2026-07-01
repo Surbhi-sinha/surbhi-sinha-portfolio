@@ -18,14 +18,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Surbhi Sinha — Full-Stack Engineer",
+  title: "Surbhi Sinha - Full-Stack Developer & AI Engineer",
   description:
-    "Surbhi Sinha — Full-stack engineer building scalable systems and intelligent products. Distributed systems, AI-driven automation, and high-performance web applications.",
+    "Portfolio of Surbhi Sinha, a full-stack developer building AI-powered products, enterprise web experiences, real-time systems, and scalable APIs.",
   icons: { icon: "/favicon.ico" },
   openGraph: {
-    title: "Surbhi Sinha — Full-Stack Engineer",
+    title: "Surbhi Sinha - Full-Stack Developer & AI Engineer",
     description:
-      "Full-stack engineer building scalable systems and intelligent products.",
+      "Full-stack developer building AI-powered products, enterprise web experiences, real-time systems, and scalable APIs.",
   },
 };
 

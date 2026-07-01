@@ -17,8 +17,8 @@ export function ServicesNew() {
     >
       <Reveal>
         <h2 className="font-display font-black uppercase leading-[0.86] tracking-[-0.02em] text-[clamp(2.75rem,11vw,9.5rem)]">
-          <span className="block text-white hover:text-zinc-400 transition-all">Strategic</span>
-          <span className="block text-accent text-shimmer">Solutions</span>
+          <span className="block text-white hover:text-zinc-400 transition-all">What I</span>
+          <span className="block text-accent text-shimmer">Build</span>
         </h2>
       </Reveal>
 

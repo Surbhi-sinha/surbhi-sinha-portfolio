@@ -1,9 +1,9 @@
-/* Single source of content for the portfolio. Keeps section components lean. */
+/* Resume-backed content for Surbhi Sinha's portfolio. */
 
 export const NAV_LINKS = [
   { label: "HOME", href: "#home" },
   { label: "PROJECTS", href: "#projects" },
-  { label: "JOURNEY", href: "#journey" },
+  { label: "EXPERIENCE", href: "#journey" },
   { label: "CONTACT", href: "#contact" },
 ];
 
@@ -11,165 +11,111 @@ export const SOCIALS = [
   { label: "GITHUB", href: "https://github.com/Surbhi-sinha" },
   { label: "LINKEDIN", href: "https://www.linkedin.com/in/surbhi-sinha-in/" },
   { label: "MEDIUM", href: "https://astsurbhisinha.medium.com/" },
-  { label: "WEBSITE", href: "https://surbhi-sinha.vercel.app/" },
+  { label: "RESUME", href: "/Surbhi-Sinha.pdf" },
 ];
 
 export const HERO_STATS = [
   {
     icon: "cpu" as const,
-    label: "ARTIFICIAL INTELLIGENCE",
-    lines: ["AI AGENTS" , "CLAUDE SKILLS", "MODEL CONTEXT PROTOCOL(MCP)", "AGENTIC AI"],
+    label: "AI ENGINEERING",
+    lines: ["MULTI-AGENT SYSTEMS", "RAG / HYBRID SEARCH", "LLM WORKFLOWS", "MCP / AGENTIC AI"],
   },
   {
     icon: "code" as const,
-    label: "LANGUAGE BASE",
-    lines: ["HTML / CSS", "JS / TS / NODE.JS", "GO / RUST", "JAVA / SPRING BOOT", "NEXT.JS / NEST.JS"],
+    label: "FULL-STACK",
+    lines: ["JAVASCRIPT / TYPESCRIPT", "REACT / NEXT.JS", "NODE.JS / NESTJS", "JAVA / SPRING BOOT"],
   },
   {
     icon: "cloud" as const,
-    label: "DEVOPS",
-    lines: ["AWS / K8S / AZURE", "DOCKER","GCP", "KUBERNETES", "RENDER", "VERCEL"],
+    label: "PLATFORM & CLOUD",
+    lines: ["AWS / AZURE / GCP", "DOCKER / CI/CD", "LINUX / GITLAB", "REST / WEBSOCKETS"],
   },
   {
     icon: "box" as const,
-    label: "ARCHITECTURE",
-    lines: ["MICROSERVICES ", "MONOLITHIC","EVENT-DRIVEN ARCHITECHTURE", "LAYERED(N-TIER) ARCHITECHTURE" , "CLEAN ARCHITECHTURE", "DISTRIBUTED SYSTEMS"],
+    label: "DATA & SYSTEMS",
+    lines: ["MICROSERVICES", "DISTRIBUTED SYSTEMS", "MONGODB / POSTGRESQL", "MYSQL / REDIS"],
   },
 ];
 
 export const SERVICES = [
   {
     index: "01",
-    tag: "INFRASTRUCTURE",
+    tag: "PRODUCT ENGINEERING",
     icon: "layers" as const,
-    title: "FULL-STACK PRODUCT DEVELOPMENT",
+    title: "FULL-STACK WEB DEVELOPMENT",
     description:
-      "End-to-end engineering from MVP to enterprise scale. I focus on performance, security, and exceptional user experience.",
-    points: [
-      "CUSTOM WEB APPLICATIONS",
-      "RESTful APIs",
-      "SAAS PLATFORMS",
-      "HIGH-FIDELITY DASHBOARDS",
-    ],
+      "Building maintainable product experiences across frontend and backend, from reusable React interfaces to secure APIs and real-time workflows.",
+    points: ["REACT & NEXT.JS INTERFACES", "NODE.JS & NESTJS APIS", "REAL-TIME WEBSOCKET FEATURES", "RESPONSIVE PRODUCT EXPERIENCES"],
   },
   {
     index: "02",
-    tag: "INTELLIGENCE",
+    tag: "APPLIED AI",
     icon: "cpu" as const,
-    title: "AI INTEGRATION & AUTOMATION",
+    title: "AI-POWERED PRODUCT FEATURES",
     description:
-      "Infuse your products with intelligence. Implementing LLMs and custom AI agents to automate workflows and drive insights.",
-    points: [
-      "AI AGENT WORKFLOWS",
-      "LLM WORKFLOWS",
-      "RAG & VECTOR SEARCH",
-      "SKILLS AND MCP IMPLEMENTATIONS",
-    ],
+      "Embedding multi-agent systems, RAG, hybrid search, and prompt-engineered LLM workflows into practical user-facing products.",
+    points: ["MULTI-AGENT ORCHESTRATION", "RAG & HYBRID SEARCH", "LLM WORKFLOW DESIGN", "MCP & AGENTIC PROGRAMMING"],
   },
   {
     index: "03",
-    tag: "ARCHITECTURE",
+    tag: "RELIABILITY",
     icon: "cloud" as const,
-    title: "SCALABLE CLOUD ARCHITECTURE",
+    title: "PERFORMANCE & PLATFORM DELIVERY",
     description:
-      "Robust backend systems designed for growth. Optimizing for high traffic, low latency, and continuous delivery.",
-    points: [
-      "SERVERLESS & MICROSERVICES ARCHITECTURE",
-      "AWS / GCP / Azure",
-      "CI / CD & DevOps",
-      "Performance & Scalability",
-    ],
+      "Improving application speed, release reliability, SEO coverage, and engineering workflows across modern cloud-hosted products.",
+    points: ["PERFORMANCE OPTIMIZATION", "CI/CD & CONTAINERIZATION", "SEO & CRAWLABILITY", "UNIT TESTING & DEBUGGING"],
   },
 ];
 
 export const SHOWCASE_PILLARS = [
-  { index: "01", title: "CLOUD ARCHITECTURE" },
-  { index: "02", title: "AI INTEGRATION" },
-  { index: "03", title: "FULL-STACK CORE" },
+  { index: "01", title: "PRODUCT ENGINEERING" },
+  { index: "02", title: "APPLIED AI" },
+  { index: "03", title: "SCALABLE WEB" },
 ];
 
 export const STACK_GROUPS = [
   {
-    title: "BACKEND & RUNTIME",
-    items: [
-      "Node.js / Express.js / Nest.js",
-      "Typescript / JavaScript",
-      "JAVA / Spring Boot",
-      "GO / GOLANG",
-      "C# / Python",
-    ],
+    title: "LANGUAGES & BACKEND",
+    items: ["JavaScript / TypeScript", "Node.js / Express.js", "NestJS", "Java / Spring Boot", "C#"],
   },
   {
-    title: "INFRASTRUCTURE & OPS",
-    items: [
-      "AWS (EKS, S3, RDS, CloudFront)",
-      "Docker / Containerization",
-      "Terraform / IaC",
-      "Git / GitHub Actions (CI/CD)",
-      "Nginx / Load Balancing",
-    ],
+    title: "PLATFORM & WORKFLOW",
+    items: ["AWS / Azure / GCP", "Docker", "CI/CD", "Git / GitLab", "Linux / Postman"],
   },
   {
-    title: "DATA & STORAGE",
-    items: [
-      "PostgreSQL / MySQL",
-      "MongoDB",
-      "Redis (Caching / Queues)",
-      "ElasticSearch",
-      "S3 / Cloud Storage",
-    ],
+    title: "DATA & ARCHITECTURE",
+    items: ["MongoDB / Mongoose", "PostgreSQL / MySQL", "Redis", "Microservices", "Distributed Systems"],
   },
   {
     title: "FRONTEND & CLIENT",
-    items: [
-      "Next.js / React.js",
-      "TypeScript",
-      "Tailwind CSS / Styled Components",
-      "Redux / Zustand / React Query",
-      "Web Sockets / Socket.IO",
-    ],
+    items: ["React.js / Next.js", "HTML5 / CSS3", "Tailwind CSS", "Zustand / Context API", "Web Components / WebSocket"],
   },
 ];
 
 export const STACK_PRINCIPLES = [
-  {
-    icon: "zap" as const,
-    title: "MODERN & SCALABLE",
-    description: "BUILD FOR PERFORMANCE AND GROWTH",
-  },
-  {
-    icon: "shield" as const,
-    title: "SECURE BY DESIGN",
-    description: "FOLLOWING BEST PRACTICES FOR SECURITY AND RELIABILITY",
-  },
-  {
-    icon: "code" as const,
-    title: "DEVELOPER EXPERIENCE",
-    description: "PRODUCTION WORKFLOWS AND CLEAN DEVELOPMENT ENVIRONMENTS",
-  },
+  { icon: "zap" as const, title: "PERFORMANCE FOCUSED", description: "LAZY LOADING, INCREMENTAL RENDERING, AND EFFICIENT ASSET DELIVERY" },
+  { icon: "shield" as const, title: "RELIABLE BY DESIGN", description: "SECURE FLOWS, TESTABLE CODE, AND RESILIENT USER EXPERIENCES" },
+  { icon: "code" as const, title: "BUILT TO EVOLVE", description: "REUSABLE COMPONENTS, CLEAR BOUNDARIES, AND MAINTAINABLE SYSTEMS" },
 ];
 
 export const CAPABILITIES = [
   {
-    index: "01_CORE_ENGINEERING",
-    title: "DISTRIBUTED SYSTEMS",
-    description:
-      "Building fault-tolerant backends that scale horizontally. Focused on high throughput and data integrity across multi-region clusters.",
-    tags: ["GO", "KAFKA", "KUBERNETES"],
+    index: "01_PRODUCT_ENGINEERING",
+    title: "ENTERPRISE FRONTENDS",
+    description: "Designing scalable, content-heavy React experiences and reusable component systems for complex product discovery and editing workflows.",
+    tags: ["REACT", "NEXT.JS", "TYPESCRIPT"],
   },
   {
     index: "02_INTELLIGENCE_LAYER",
-    title: "APPLIED AI AGENTS",
-    description:
-      "Integrating large language models into production workflows. Developing autonomous agents for complex task orchestration and data analysis.",
-    tags: ["PYTORCH", "OPENAI_API", "VECTOR_DB"],
+    title: "APPLIED AI SYSTEMS",
+    description: "Building multi-agent orchestration, RAG optimizations, hybrid search, and LLM workflows aligned with user-defined guidelines.",
+    tags: ["LLM", "RAG", "MCP"],
   },
   {
-    index: "03_INTERFACE_LAB",
-    title: "ADVANCED FRONTENDS",
-    description:
-      "Crafting high-fidelity, high-performance web experiences. Specializing in data visualization and complex dashboard architecture.",
-    tags: ["NEXT.JS", "TYPESCRIPT", "THREE.JS"],
+    index: "03_BACKEND_SYSTEMS",
+    title: "REAL-TIME PLATFORMS",
+    description: "Developing REST APIs, WebSocket gateways, authentication, and data models for secure, responsive full-stack applications.",
+    tags: ["NESTJS", "WEBSOCKET", "MONGODB"],
   },
 ];
 
@@ -179,117 +125,94 @@ export type Project = {
   title: string;
   description: string;
   cta?: { label: string; href: string };
-  points:string[],
+  points: string[];
   image: string;
-  /** how the media relates to the card body */
   layout: "media-top" | "media-side" | "media-bg" | "text";
-  /** body surface */
   theme: "light" | "dark";
-  /** CTA presentation */
   ctaStyle: "arrow" | "accent" | "bar" | "box" | "none";
 };
 
 export const PROJECTS: Project[] = [
   {
     index: "01",
-    meta: "2024 / REACT & THREE.JS",
-    title: "THE CARSTUDIO",
-    description:
-      "A high-performance 3D car customization platform using .glb files and a rich interactive UI. Optimized for advanced WebGL rendering and rapid material loading.",
-    cta: { label: "EXPLORE PLATFORM", href: "https://the-car-studio.vercel.app/configurator" },
-    image: "/carStudio.gif",
-    points:[],
+    meta: "NEXT.JS / NESTJS / WEBSOCKETS",
+    title: "MEDICO",
+    description: "A real-time healthcare communication platform connecting patients and doctors through secure, role-based experiences.",
+    cta: { label: "LAUNCH MEDICO", href: "https://medicoz-web.vercel.app/" },
+    image: "/Medicoz.png",
+    points: ["JWT authentication and protected patient/doctor routes", "Room-based messaging, typing indicators, and connection status", "NestJS WebSocket Gateway and REST APIs", "MongoDB models for users, messages, and chat rooms"],
     layout: "media-top",
     theme: "dark",
     ctaStyle: "arrow",
   },
   {
     index: "02",
-    meta: "AI / MONGODB",
+    meta: "REACT / NODE.JS / OPENROUTER",
     title: "NEURANOTES",
-    description:
-      "A full-stack Notes Application built using React (Frontend) and Node.js with MongoDB (Backend). The app features an interactive canvas for managing notes, supports CRUD operations, and integrates AI enhancements using OpenRouter.",
-    cta: { label: "LAUNCH APP", href: "https://neura-notes-ashen.vercel.app/" },
+    description: "A full-stack AI notes workspace with an interactive drag-and-drop canvas, persistent storage, and writing assistance.",
+    cta: { label: "LAUNCH NEURANOTES", href: "https://neura-notes-ashen.vercel.app/" },
     image: "/NeuraNotesDemo.gif",
-    points:[
-      "Interactive Canvas: Drag and position notes freely.",
-      "Create, Read, Update, Delete (CRUD) Notes.",
-      "AI Integration: Improve grammar, summarize, or expand notes.",
-      "Persistent Storage: Notes are stored in MongoDB.",
-      "Context API for State Management.",
-      "Responsive & User-Friendly UI.]"],
-    layout: "media-top",
-    theme: "dark",
-    ctaStyle: "arrow",
-  },  
-  {
-    index: "03",
-    meta: "DASHBOARD / CHAT APPLICATION",
-    title: "MEDICOZ",
-    description:
-      "Developed a healthcare communication platform featuring user and doctor registration, secure authentication, profile management, and real-time chat functionality, enabling seamless interaction between patients and healthcare professionals. Medico is a healthcare communication platform that connects patients and doctors through a streamlined digital experience. The platform currently supports user and doctor onboarding, authentication, profile management, and real-time messaging, allowing healthcare professionals and patients to communicate efficiently. Its modular architecture enables future expansion into appointment scheduling, telemedicine, electronic health records, and comprehensive hospital management services.",
-    cta: { label: "LAUNCH APP", href: "https://medicoz-web.vercel.app/" },
-    image: "/Medicoz.png",
-    points:[],
+    points: ["Complete CRUD note workflows", "Flexible canvas built with react-rnd", "AI grammar, summary, and expansion tools", "MongoDB persistence and React Context state"],
     layout: "media-top",
     theme: "dark",
     ctaStyle: "arrow",
   },
-
+  {
+    index: "03",
+    meta: "REACT / THREE.JS / WEBGL",
+    title: "THE CARSTUDIO",
+    description: "An interactive 3D car configurator with rich material customization and optimized GLB asset rendering.",
+    cta: { label: "EXPLORE CONFIGURATOR", href: "https://the-car-studio.vercel.app/configurator" },
+    image: "/carStudio.gif",
+    points: [],
+    layout: "media-top",
+    theme: "dark",
+    ctaStyle: "arrow",
+  },
   {
     index: "04",
-    meta: "FIREBASE / BOOTSTRAP",
+    meta: "FIREBASE / TASK MANAGEMENT",
     title: "TASK BUDDY",
-    description:
-      "TaskBuddy is a comprehensive task management application designed to help you organize your personal and professional life with ease. Whether you're managing daily to-dos, tracking project milestones, or collaborating with a team, TaskBuddy provides the tools you need to stay productive and focused. With its intuitive interface and powerful features, TaskBuddy transforms the way you manage tasks, helping you prioritize effectively and never miss a deadline again.",
+    description: "A productivity application for organizing tasks, tracking progress, and keeping personal and professional work accountable.",
     cta: { label: "OPEN TASK BUDDY", href: "https://taskbuddy-psi.vercel.app/" },
     image: "/Taskbuddy-copy.png",
-    points:[
-      "Sign Up/Login: Authenticate your Google Account.",
-"Create Your First Task: Click the 'ADD TASK' button to add a new task",
-"Organize: Categorize your tasks, set due dates, and attach relevant files",
-"Track Progress: Move tasks across different status columns as you make progress",
-"Stay Updated: Monitor task history and activity logs to maintain accountability"
-    ],
+    points: ["Google authentication", "Task categories, due dates, and attachments", "Status-based progress tracking", "Task history and activity logs"],
     layout: "media-side",
     theme: "dark",
     ctaStyle: "accent",
   },
   {
     index: "05",
-    meta: "TYPESCRIPT / LOGIC",
+    meta: "TYPESCRIPT / MATCHING LOGIC",
     title: "SECRET SANTA",
-    description:
-      "Architected a complex gift exchange system with custom logic rules, handling historical constraints and participant matching with high reliability.",
+    description: "A gift-exchange application that applies participant constraints and historical rules to produce dependable matches.",
     cta: { label: "EXPLORE SECRET SANTA", href: "https://secret-santa-frontend-self.vercel.app/" },
     image: "/secretsanta.gif",
-    points:[],
+    points: [],
     layout: "media-bg",
     theme: "dark",
     ctaStyle: "accent",
   },
   {
     index: "06",
-    meta: "REDIS / DOCKER",
+    meta: "REDIS / DOCKER / LOCALIZATION",
     title: "MULTILINGUAL FAQ",
-    description:
-      "Scalable FAQ system with dynamic language support. Leverages Redis for caching and Google Translate API for automated localization.",
+    description: "A multilingual FAQ system using Redis caching and automated translation to serve localized answers efficiently.",
     image: "/multilingual.png",
-    points:[],
-    cta: { label: "VIEW SYSTEM", href: "https://github.com/Surbhi-sinha/Multilingual_FAQ_system_UI" },
+    points: [],
+    cta: { label: "VIEW SOURCE", href: "https://github.com/Surbhi-sinha/Multilingual_FAQ_system_UI" },
     layout: "media-top",
     theme: "dark",
     ctaStyle: "bar",
   },
   {
     index: "07",
-    meta: "C# / .NET CORE",
+    meta: "C# / .NET",
     title: "DESKTOP CALCULATOR",
-    description:
-      "Advanced Windows utility with support for keyboard shortcuts and dynamic theming, built using modern .NET architectures.",
-    cta: { label: "SOURCE CODE", href: "https://github.com/Surbhi-sinha" },
+    description: "A Windows calculator with keyboard shortcuts and dynamic themes, developed with C# and modern .NET tooling.",
+    cta: { label: "VIEW GITHUB", href: "https://github.com/Surbhi-sinha" },
     image: "/calc.gif",
-    points:[],
+    points: [],
     layout: "media-bg",
     theme: "dark",
     ctaStyle: "box",
@@ -298,66 +221,55 @@ export const PROJECTS: Project[] = [
 
 export const JOURNEY = [
   {
-    period: "MAY 2025 — PRESENT",
-    location: "Bangalore, INDIA",
-    role: "FULLSTACK DEVELOPER",
-    company: "UXMagic.ai",
-    detail: "Product - UXMagic.ai , SeoSorted.ai",
-    point:[
-"Building AI based solutions for the designers.",
-"Designed and built scalable, content-driven frontend architectures (Inspirations, community, and discovery pages) supporting 10+ product workflows",
-"Deloped reusable UI component libraries using React, improving development speed and consistency across features",
-"Built and integrated backend APIs to enable dynamic editing within design workflows, enhancing product flexibility and usability",
-"Implemented LLM-powered workflows aligned with user-defined guidelines, driving ~35% increase in feature adoption",
-"Optimized performance through lazy loading, incremental rendering, and efficient asset management, improving page load speed by 20–30%",
-"Identified and fixed critical issues in React export flows, reducing user errors by ~25% in a key product workflow",
-"Improved SEO and discoverability by resolving robots.txt and sitemap issues, achieving near-complete crawl coverage",
-"Contributed to a frontend monolithic architecture, optimizing component reuse and maintaining performance while scaling features",
-"Collaborated closely with design, product, and engineering teams to deliver user-focused features in a fast-paced environment"
+    period: "JUNE 2025 - PRESENT",
+    location: "BENGALURU, INDIA",
+    role: "FULL-STACK DEVELOPER",
+    company: "UXMagic.AI",
+    detail: "AI-powered design and product experiences",
+    point: [
+      "Embedded multi-agent orchestration, RAG optimization, and hybrid search into an AI design assistant.",
+      "Architected content-heavy experiences across 10+ product discovery pages using reusable React components.",
+      "Built backend APIs and prompt-engineered LLM workflows, contributing to a 35% increase in feature adoption.",
+      "Improved new-page load performance by approximately 20-30% through lazy loading and incremental rendering.",
+      "Reduced React export-flow errors by approximately 25% and restored near-complete SEO crawl coverage.",
     ],
     current: true,
   },
   {
-    period: "JAN 2024 — MAY 2025",
-    location: "Noida, INDIA",
+    period: "JANUARY 2024 - MAY 2025",
+    location: "NOIDA, INDIA",
     role: "SOFTWARE ENGINEER",
-    company: "Grapecity India",
-    detail: "Product - SpreadJS",
-    point:[
-      "Developed tailored software component extensions to enhance efficiency.",
-"Improved user experiences for end customers through advanced solutions.",
-"Designed scalable enterprise-grade JavaScript solutions for Excel functionality.",
-"Optimized performance of SpreadJS in complex web environments.",
-"Worked with technologies: JavaScript, TypeScript, ReactJS, AngularJS, NodeJS, C#.",
-"Used tools like GitLab and Visual Studio for seamless workflows."
+    company: "GRAPECITY INDIA",
+    detail: "Developer Tools Division - SpreadJS",
+    point: [
+      "Delivered tailored component extensions that improved developer and end-user experiences.",
+      "Designed customizable enterprise JavaScript solutions focused on client-side Excel functionality.",
+      "Optimized SpreadJS behavior in complex web environments and delivered CRM enhancements.",
+      "Worked with JavaScript, TypeScript, React, Node.js, C#, PostgreSQL, MySQL, GitLab, and Webpack.",
     ],
     current: false,
   },
   {
-    period: "APR 2023 — JUN 2023",
-    location: "Hyderabad, INDIA",
-    role: "SOFTWARE DEVELOPER INTERN",
-    company: "Microsoft",
-    detail: "Product - Azure Devops (core) Test Plans Team",
-    point:[
-      "Enhanced Azure DevOps Test Plans' import/export functionality, reducing file size by up to 500 KB.  ",
-"Developed unit tests and optimized features using npm packages.  ",
-"Collaborated with global teams to implement micro-frontends and workflows.  ",
-"Followed Agile methodologies for feature development and delivery.  ",
-"Gained expertise in C#, SQL Management Studio, MySQL, and telemetry tools."
+    period: "APRIL 2023 - JUNE 2023",
+    location: "HYDERABAD, INDIA",
+    role: "SOFTWARE ENGINEERING INTERN",
+    company: "MICROSOFT INDIA",
+    detail: "Azure DevOps Test Plans Team",
+    point: [
+      "Enhanced test-case import/export workflows and reduced generated file sizes by up to 500 KB.",
+      "Developed unit tests and evaluated npm packages to optimize feature implementation.",
+      "Collaborated with cross-geographic teams on micro-frontends and Agile delivery workflows.",
+      "Worked with C#, SQL Management Studio, MySQL, and telemetry tools.",
     ],
     current: false,
   },
   {
-    period: "2020 — 2024",
-    location: "New Delhi, INDIA",
-    role: "B.TECH IN COMPUTER SCIENCE",
-    company: "Guru Govind Singh Indraprastha University",
-    detail: "Computer Science Engineering",
-    point:[
-      "CGPA : 9.2",
-      "Data Structures, Computer Networks &  Database Management System"
-    ],
+    period: "2020 - 2024",
+    location: "NEW DELHI, INDIA",
+    role: "B.TECH, COMPUTER SCIENCE ENGINEERING",
+    company: "GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY",
+    detail: "Graduated with a 9.2 CGPA",
+    point: ["Coursework included data structures and algorithms, OOP, DBMS, operating systems, and computer networks."],
     current: false,
   },
 ];

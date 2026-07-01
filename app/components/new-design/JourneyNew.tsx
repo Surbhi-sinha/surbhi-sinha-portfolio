@@ -11,11 +11,11 @@ export function JourneyNew() {
       {/* Heading */}
       <Reveal>
         <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
-          career.timeline()
+          experience.timeline()
         </p>
         <h2 className="mt-5 font-display font-black uppercase leading-[0.84] tracking-[-0.02em] text-[clamp(2.75rem,11vw,9.5rem)]">
-          <span className="block text-white">Professional</span>
-          <span className="block text-accent text-shimmer">Journey</span>
+          <span className="block text-white">Experience &</span>
+          <span className="block text-accent text-shimmer">Education</span>
         </h2>
       </Reveal>
 

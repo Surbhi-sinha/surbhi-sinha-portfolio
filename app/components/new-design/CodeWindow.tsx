@@ -14,65 +14,55 @@ type Status = "ctx" | "del" | "add";
 type Line = { num: number; status: Status; code: string };
 
 const OLD_LINES: Line[] = [
-  { num: 1, status: "ctx", code: "import React from 'react'" },
-  { num: 2, status: "ctx", code: "import { View, ActivityIndicator } from 'react-native'" },
-  { num: 3, status: "del", code: "import { useVehicleState } from '@hooks/useVehicleState'" },
-  { num: 4, status: "ctx", code: "import { Dashboard } from '@components/Dashboard'" },
+  { num: 1, status: "ctx", code: "import { updateFrame } from './designApi'" },
+  { num: 2, status: "ctx", code: "import { buildPrompt } from './prompt'" },
+  { num: 3, status: "del", code: "import { complete } from './llm'" },
+  { num: 4, status: "ctx", code: "" },
   { num: 5, status: "ctx", code: "" },
-  { num: 6, status: "ctx", code: "export const HomeScreen = () => {" },
-  { num: 7, status: "del", code: "  const { vehicleState, isFullySynced } = useVehicleState()" },
+  { num: 6, status: "ctx", code: "export const editSection = async (frame, brief) => {" },
+  { num: 7, status: "del", code: "  const result = await complete(brief)" },
   { num: 8, status: "ctx", code: "" },
-  { num: 9, status: "del", code: "  if (!isFullySynced) {" },
-  { num: 10, status: "ctx", code: "    return <ActivityIndicator size=\"large\" />" },
-  { num: 11, status: "ctx", code: "  }" },
+  { num: 9, status: "del", code: "  if (!result) throw new Error('Generation failed')" },
+  { num: 10, status: "ctx", code: "" },
+  { num: 11, status: "ctx", code: "  return updateFrame(frame.id, result)" },
   { num: 12, status: "ctx", code: "" },
-  { num: 13, status: "ctx", code: "  return (" },
-  { num: 14, status: "ctx", code: "    <View>" },
-  { num: 15, status: "del", code: "      <Dashboard state={vehicleState} />" },
-  { num: 16, status: "ctx", code: "    </View>" },
-  { num: 17, status: "ctx", code: "  )" },
-  { num: 18, status: "ctx", code: "}" },
+  { num: 13, status: "ctx", code: "}" },
 ];
 
 const NEW_LINES: Line[] = [
-  { num: 1, status: "ctx", code: "import React from 'react'" },
-  { num: 2, status: "ctx", code: "import { View, ActivityIndicator } from 'react-native'" },
-  { num: 3, status: "add", code: "import { useVehicleState, SyncStatus } from '@hooks/useVehicleState'" },
-  { num: 4, status: "ctx", code: "import { Dashboard } from '@components/Dashboard'" },
+  { num: 1, status: "ctx", code: "import { updateFrame } from './designApi'" },
+  { num: 2, status: "ctx", code: "import { buildPrompt } from './prompt'" },
+  { num: 3, status: "add", code: "import { orchestrate } from './agents'" },
+  { num: 4, status: "ctx", code: "" },
   { num: 5, status: "ctx", code: "" },
-  { num: 6, status: "ctx", code: "export const HomeScreen = () => {" },
-  { num: 7, status: "add", code: "  const { vehicleState, syncStatus } = useVehicleState()" },
+  { num: 6, status: "ctx", code: "export const editSection = async (frame, brief) => {" },
+  { num: 7, status: "add", code: "  const prompt = buildPrompt(brief, frame.guidelines)" },
   { num: 8, status: "ctx", code: "" },
-  { num: 9, status: "add", code: "  if (syncStatus === SyncStatus.PENDING) {" },
-  { num: 10, status: "ctx", code: "    return <ActivityIndicator size=\"large\" />" },
-  { num: 11, status: "ctx", code: "  }" },
+  { num: 9, status: "add", code: "  const result = await orchestrate(prompt, { hybridSearch: true })" },
+  { num: 10, status: "ctx", code: "" },
+  { num: 11, status: "ctx", code: "  return updateFrame(frame.id, result)" },
   { num: 12, status: "ctx", code: "" },
-  { num: 13, status: "ctx", code: "  return (" },
-  { num: 14, status: "ctx", code: "    <View>" },
-  { num: 15, status: "add", code: "      <Dashboard state={vehicleState} syncStatus={syncStatus} />" },
-  { num: 16, status: "ctx", code: "    </View>" },
-  { num: 17, status: "ctx", code: "  )" },
-  { num: 18, status: "ctx", code: "}" },
+  { num: 13, status: "ctx", code: "}" },
 ];
 
 const FEATURES = [
   {
     icon: ShieldEnergyIcon,
     color: "text-accent",
-    title: "More Reliable",
-    desc: "Better state management and sync handling",
+    title: "35% More Adoption",
+    desc: "Guideline-aware LLM workflows",
   },
   {
     icon: DashboardSpeed02Icon,
     color: "text-accent",
-    title: "Faster Performance",
-    desc: "Optimized re-renders and reduced latency",
+    title: "Hybrid Retrieval",
+    desc: "RAG optimized for relevant context",
   },
   {
     icon: TradeUpIcon,
     color: "text-accent",
-    title: "Business Impact",
-    desc: "Improved UX and higher user satisfaction",
+    title: "Sectional Editing",
+    desc: "Backend APIs for targeted design updates",
   },
 ];
 
@@ -193,7 +183,7 @@ export function CodeWindow({ className = "" }: { className?: string }) {
               strokeWidth={1.6}
             />
             <span className="truncate font-sans text-sm font-semibold text-white">
-              HomeScreen.tsx
+              editSection.ts
             </span>
           </div>
           <span className="flex shrink-0 items-center gap-2 rounded-full border border-accent/40 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-accent">

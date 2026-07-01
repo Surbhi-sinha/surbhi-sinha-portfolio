@@ -8,14 +8,14 @@ import { TerminalIcon } from "./icons";
 const FIELDS = [
   {
     name: "name",
-    label: "SUBJECT_NAME",
-    placeholder: "NAME / ORGANIZATION",
+    label: "YOUR_NAME",
+    placeholder: "NAME OR ORGANIZATION",
     type: "text",
   },
   {
     name: "email",
-    label: "RETURN_ADDRESS",
-    placeholder: "EMAIL_ADDRESS",
+    label: "YOUR_EMAIL",
+    placeholder: "EMAIL ADDRESS",
     type: "email",
   },
 ] as const;
@@ -26,10 +26,10 @@ export function ContactNew() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent(
-      `Project Brief — ${form.name || "New inquiry"}`
+      `Portfolio inquiry - ${form.name || "New message"}`
     );
     const body = encodeURIComponent(
-      `Name / Organization: ${form.name}\nReturn address: ${form.email}\n\nSpecifications / Goals:\n${form.brief}`
+      `Name / Organization: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.brief}`
     );
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
@@ -45,13 +45,13 @@ export function ContactNew() {
           <div className="flex flex-col p-8 sm:p-10 lg:p-12">
             <h2 className="font-display font-black uppercase leading-[0.86] tracking-[-0.02em] text-[clamp(3rem,8vw,6rem)]">
               <span className="block text-white">Let&rsquo;s</span>
-              <span className="block text-white">Talk</span>
-              <span className="block italic text-accent text-shimmer pr-[0.12em]">Biz</span>
+              <span className="block text-white">Build</span>
+              <span className="block italic text-accent text-shimmer pr-[0.12em]">Together</span>
             </h2>
 
             <div className="mt-12">
               <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
-                Direct_Relay
+                EMAIL_ME
               </p>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
@@ -69,13 +69,13 @@ export function ContactNew() {
                 <span className="h-3 w-3 rounded-full bg-[#27c93f]" />
               </div>
               <p className="mt-5 text-[#27c93f]">
-                surbhi@system:~$ ./init_session
+                surbhi@portfolio:~$ ./connect
               </p>
               <p className="mt-1 text-zinc-400">
-                Initializing handshake protocol...
+                Full-stack, AI, and product engineering
               </p>
               <p className="mt-1 text-accent">
-                Awaiting input
+                Open to thoughtful conversations
                 <span className="ml-0.5 inline-block w-2 animate-[caret_1s_steps(1)_infinite]">
                   _
                 </span>
@@ -104,10 +104,10 @@ export function ContactNew() {
             className="flex flex-col border-t border-line p-8 sm:p-10 lg:border-l lg:border-t-0 lg:p-12"
           >
             <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent text-shimmer">
-              Inquiry_Form_V2
+              SEND_A_MESSAGE
             </p>
             <h3 className="mt-3 font-sans text-2xl font-extrabold uppercase tracking-[0.04em] text-white sm:text-3xl">
-              Transmit Brief
+              Start A Conversation
             </h3>
 
             <div className="mt-10 space-y-10">
@@ -139,7 +139,7 @@ export function ContactNew() {
                   htmlFor="brief"
                   className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-accent text-shimmer"
                 >
-                  Project_Parameters
+                  YOUR_MESSAGE
                 </label>
                 <textarea
                   id="brief"
@@ -149,7 +149,7 @@ export function ContactNew() {
                   onChange={(e) =>
                     setForm((f) => ({ ...f, brief: e.target.value }))
                   }
-                  placeholder="SPECIFICATIONS / GOALS"
+                  placeholder="TELL ME WHAT YOU WOULD LIKE TO DISCUSS"
                   className="mt-3 w-full resize-none border-b border-line-strong bg-transparent pb-3 font-mono text-base uppercase tracking-[0.05em] text-white placeholder:text-zinc-600 focus:border-accent focus:outline-none"
                 />
               </div>
@@ -159,7 +159,7 @@ export function ContactNew() {
               type="submit"
               className="group mt-12 inline-flex items-center justify-center gap-3 border border-white py-5 font-mono text-[12px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-accent hover:border-accent"
             >
-              Execute Transmission
+              Open Email Draft
               <TerminalIcon className="h-5 w-5" />
             </button>
           </form>
